@@ -4,16 +4,179 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <title>QuickSpace</title>
   </head>
   <!-- mobile default desktop lg-->
   <body>
     <!-- toei Header start here -->
+    <!-- navigation bar start here -->
+    <section class="bg-gradient-to-t from-[#EAF0FF00] to-[#E4ECFF]">
+      <nav class="p-5 lg:flex lg:items-center lg:justify-between">
+        <div class="flex items-center justify-between">
+          <span><img class="h-10 inline" src="src/Logo.svg" alt="logo" /></span>
+
+          <span class="block text-3xl cursor-pointer lg:hidden">
+            <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+          </span>
+        </div>
+
+        <ul
+          class="bg-white rounded-xl shadow-xl lg:flex lg:items-center lg:z-auto z-[1] lg:static absolute w-full left-0 lg:w-auto lg:py-0 py-4 lg:pl-0 pl-7 lg:opacity-100 opacity-0 top-[-400px] lg:top-0 transition-all ease-in duration-500 lg:bg-transparent lg:shadow-none"
+        >
+          <li class="mx-4 my-6 lg:my-0">
+            <a
+              href="#"
+              class="text-[#090F4E] hover:text-cyan-500 hover:underline duration-500"
+              >Company</a
+            >
+          </li>
+
+          <li class="mx-4 my-6 lg:my-0">
+            <a
+              href="#"
+              class="text-[#090F4E] hover:text-cyan-500 hover:underline duration-500"
+              >Feature</a
+            >
+          </li>
+
+          <li class="mx-4 my-6 lg:my-0">
+            <a
+              href="#"
+              class="text-[#090F4E] hover:text-cyan-500 hover:underline duration-500"
+              >Pricing</a
+            >
+          </li>
+
+          <li class="mx-4 my-6 lg:my-0">
+            <a
+              href="#"
+              class="text-[#090F4E] hover:text-cyan-500 hover:underline duration-500"
+              >Login</a
+            >
+          </li>
+
+          <button
+            class="bg-[#293FCC] text-white font-[Poppins] px-6 py-2 mx-4 hover:bg-cyan-500 rounded duration-500"
+          >
+            Try Free
+          </button>
+        </ul>
+      </nav>
+
+      <script>
+        function Menu(e) {
+          let list = document.querySelector("ul");
+
+          if (e.name === "menu") {
+            e.name = "close";
+
+            list.classList.add("top-[80px]");
+
+            list.classList.add("opacity-100");
+          } else {
+            e.name = "menu";
+
+            list.classList.remove("top-[80px]");
+
+            list.classList.remove("opacity-100");
+          }
+        }
+      </script>
+
+      <!-- navigation bar end here -->
+
+      <!-- Main Content -->
+
+      <div
+        class="flex flex-col-reverse lg:flex-row justify-center items-center lg:p-2"
+      >
+        <!-- Left Content -->
+
+        <div class="text-center lg:text-left lg:p-20 lg:m-1 lg:max-w-[800px]">
+          <button
+            class="bg-[#F8FAFF] text-[#293FCC] rounded-lg px-4 py-2 font-[Poppins] font-bold mb-4"
+          >
+            Welcome QuickSpace
+          </button>
+
+          <h1
+            class="text-3xl lg:text-3xl font-bold text-[#090F4E] leading-tight"
+          >
+            Satisfied Customer Is the Best Business Strategy
+          </h1>
+
+          <p class="mt-4 text-lg text-gray-600">
+            Backed with vast experience and fully up-to-date skills, at Enuke
+            Software we offer the best in class E-Prescription solution.
+          </p>
+
+          <div
+            class="flex justify-center flex-col items-center mt-6 space-x-4 lg:flex-row lg:justify-start"
+          >
+            <button
+              class="bg-[#293FCC] text-white px-6 py-2 rounded-lg font-[Poppins] hover:bg-cyan-500 duration-500"
+            >
+              Try Free
+            </button>
+
+            <button
+              class="flex p-6 space-x-4 text-[#293FCC] font-[Poppins] hover:underline"
+            >
+              <ion-icon name="play-circle-outline" class="text-2xl"></ion-icon>
+
+              <span>View Demo</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Image -->
+
+        <div class="">
+          <img class="" src="/src/Objects.png" alt="QuickSpace Image" ">
+        </div>
+      </div>
+
+      <div
+        class="flex justify-center items-center py-5 my-2 lg:flex lg:w-[778px] w-[400px] mx-auto gap-10 lg:gap-[100px]"
+      >
+        <div>
+          <img class="w-20 lg:w-[400px]" src="/src/brand-04.png" alt="" />
+        </div>
+
+        <div>
+          <img class="w-20 lg:w-[400px]" src="/src/brand-01.png" alt="" />
+        </div>
+
+        <div>
+          <img class="w-20 lg:w-[400px]" src="/src/brand-06.png" alt="" />
+        </div>
+
+        <div>
+          <img
+            class="w-20 hidden lg:inline lg:w-[400px]"
+            src="/src/brand-05.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <!-- content end here -->
     <!-- toei Header end here -->
 
     <!-- pang Perfect Solution start here -->
